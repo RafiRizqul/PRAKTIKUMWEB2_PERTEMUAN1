@@ -110,7 +110,7 @@
         <label for="bagian_id" class="form-label">Bagian</label>
             <?php
             $selectSQLBagian = "SELECT * FROM bagian";
-            $result_bagian = mysqli_query($connection, $selectSQL);
+            $result_bagian = mysqli_query($connection, $selectSQLBagian);
             if (!$result_bagian) {
             ?>
                 <div class="alert alert-danger" role="alert">
@@ -136,7 +136,7 @@
                 ?>
                     <option value="<?php echo $row_bagian["id"] ?>"
                     <?php echo $bagian_selected ?>>
-                    <?php echo $row["nama"] ?>
+                    <?php echo $row_bagian["nama"] ?>
                 </option>
                 <?php
                 }
